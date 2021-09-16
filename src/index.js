@@ -19,6 +19,7 @@ app.use('/api/task',require('./routes/task.route'))
   app.use(express.static(path.join(__dirname, 'public'))) //Encontrar html en carpeta public
 
 // Starting server
-app.listen(app.get('port'),"192.168.0.5",() =>{
+app.listen(app.get('port'),"192.168.0.4",() =>{
     console.log(`Server on port ${app.get('port')}`);
 })
+
