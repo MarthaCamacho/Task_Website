@@ -35,7 +35,9 @@ class App extends Component {
                     M.toast({ html: 'Task Updated' });
                     this.setState({ _id: '', title: '', description: '' });
                     this.fetchTask();
-                });
+                })
+                .catch(err => console.error(err));
+            e.preventDefault(); //Evita que se recargue la página
         } else {
             //Enviar al servidor datos
             fetch('/api/task', {
